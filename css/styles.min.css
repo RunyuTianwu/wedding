@@ -289,255 +289,6 @@ section .header {
     }
 }
 
- /* 分享卡片样式 */
- .share-card {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #e8e1d1;
-    border-radius: 10px;
-    overflow: hidden;
-    background: #fff;
-    text-align: left;
-}
-
-.share-card-image {
-    width: 100%;
-    height: 200px; 
-    position: relative;
-    overflow: hidden;
-}
-
-.share-card-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('img/0Y0A3235.jpg') center/contain no-repeat;
-    background-size: cover; 
-}
-
-.share-card-content {
-    padding: 15px;
-}
-
-.share-card-title {
-    font-size: 1.3em;
-    color: #8e5c2c;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.share-card-description {
-    font-size: 0.9em;
-    color: #5c4520;
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.share-card-url {
-    font-size: 0.8em;
-    color: #aaa;
-    display: flex;
-    align-items: center;
-}
-
-.share-card-url::before {
-    content: "●";
-    color: #d4a76a;
-    margin-right: 5px;
-    font-size: 0.5em;
-    vertical-align: middle;
-}
-/* 新增的倒计时样式 */
-.countdown-container {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-    flex-wrap: wrap;
-}
-
-.countdown-box {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    min-width: 100px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.countdown-box:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.95);
-}
-
-.countdown-value {
-    font-size: 3em;
-    font-weight: bold;
-    color: #e74c3c;
-    display: block;
-    line-height: 1;
-    margin-bottom: 5px;
-    text-shadow: 0 2px 3px rgba(0,0,0,0.1);
-}
-
-.countdown-label {
-    font-size: 1em;
-    color: #666;
-    text-transform: uppercase;
-}
-
-.countdown-message {
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 20px;
-    color: #e74c3c;
-    font-weight: bold;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 0.7; }
-    50% { opacity: 1; }
-    100% { opacity: 0.7; }
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .countdown-box {
-        min-width: 70px;
-        padding: 15px 10px;
-    }
-    
-    .countdown-value {
-        font-size: 2em;
-    }
-    
-    .countdown-label {
-        font-size: 0.8em;
-    }
-}
-
-
-/* 照片墙部分 */
-#gallery {
-    background: #f9f4e8;
-}
-
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-item {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    height: 250px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.gallery-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(142, 92, 44, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
-}
-
-.gallery-overlay i {
-    color: white;
-    font-size: 2em;
-}
-
-.intro {
-    margin-bottom: 0.5em !important;
-    padding-bottom: 0 !important;
-} 
-.header-content .logo {
-    margin-left: 1em;
-}
-.header-content .header-nav  
-.header-content .primary-nav li a,
-.header-content .member-actions li a {
-    font-size: 1.1em !important; 
-    padding-top: 0.2em !important;
-    padding-bottom: 0.2em !important; 
-}  
-.map-nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    flex-wrap: wrap;
-    width: 95vw;
-    max-width: 640px;
-    margin: 16px auto;
-}
-.map-nav-container a {
-    flex: 1 1 180px;
-    min-width: 120px;
-    text-align: center;
-}
-.traffic-info-container {
-    width: 95vw;
-    max-width: 720px;
-    margin: 2em auto 0 auto;
-    padding: 0;
-    background: none;
-}
-.traffic-info-container p {
-    font-size: 1.1em;
-    color: #331a00;
-    font-family: 'Microsoft YaHei','宋体',serif;
-    line-height: 1.3;
-    margin-bottom: 0.3em;
-    text-align: left;
-    padding: 6px 12px 6px 4em; /* 右侧16px，左侧2em自适应缩进 */
-    border-radius: 10px;
-    background: none;
-    box-sizing: border-box;
-    word-break: break-all;
-}
-@media (max-width: 540px) {
-    .traffic-info-container, .map-nav-container {
-        max-width: 98vw;
-        width: 98vw;
-    }
-    .traffic-info-container p {
-        font-size: 1em;
-        padding-left: 1em;
-        padding-right: 1em;
-    }
-}
-
 .wp1,
 .wp2,
 .wp3,
@@ -656,7 +407,7 @@ section .header {
 }
 
 .hero {
-    min-height: 750px;
+    min-height: 360px;
     background: url("../img/a0442.jpg") center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -713,17 +464,6 @@ header {
     margin: 0 auto;
     transition: padding 300ms ease-in-out
 }
-
-@media (max-width: 768px) {
-    header {
-      padding: 15px 0;
-      width: 100%;
-    }
-
-    header .logo img {
-        height: 15px
-    }
-  }
 
 header a {
     color: #fff;
@@ -1087,6 +827,24 @@ header .member-actions {
     width: 100%
 }
 
+@media (max-width: 767.98px) {
+    #eng-pics .row > [class*="col-"] {
+      padding: 8px;
+      box-sizing: border-box;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  #eng-pics .row {
+    margin-left: -8px;
+    margin-right: -8px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
 #eng-pics img {
     width: 100%;
     height: auto;
@@ -1229,6 +987,81 @@ header .member-actions {
     pointer-events: auto
 }
 
+.rsvp {
+    padding-bottom: 140px
+}
+
+.rsvp .rsvp-form .rsvp-btn {
+    padding: 15px 0;
+    border-radius: 3px;
+    width: 100%;
+    font-size: 13px
+}
+
+.rsvp .rsvp-form .form-input-group {
+    width: 100%;
+    height: 55px;
+    margin: 0 auto 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: solid 1px #e6e9ea;
+    text-align: left;
+    position: relative
+}
+
+.rsvp .rsvp-form .form-input-group i {
+    color: #e8ca6f;
+    font-size: 14px
+}
+
+.rsvp .rsvp-form .form-input-group i:after {
+    content: "";
+    height: 30px;
+    width: 1px;
+    border-right: solid 1px #e6e9ea;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%)
+}
+
+.rsvp .rsvp-form .form-input-group i.fa-user,
+.rsvp .rsvp-form .form-input-group i.fa-users,
+.rsvp .rsvp-form .form-input-group i.fa-envelope,
+.rsvp .rsvp-form .form-input-group .fa-key {
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 20px
+}
+
+.rsvp .rsvp-form .form-input-group input {
+    padding-left: 68px;
+    width: 100%;
+    height: 100%;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: none
+}
+
+.rsvp .rsvp-form .form-input-group input::-webkit-input-placeholder {
+    color: #bcc1c3
+}
+
+.rsvp .rsvp-form .form-input-group input:-moz-placeholder {
+    color: #bcc1c3
+}
+
+.rsvp .rsvp-form .form-input-group input::-moz-placeholder {
+    color: #bcc1c3
+}
+
+.rsvp .rsvp-form .form-input-group input:-ms-input-placeholder {
+    color: #bcc1c3
+}
 
 footer .content {
     border-top: 1px solid #e6e9ea;
@@ -1297,4 +1130,12 @@ th {
 
 .countdown-value {
     color: #6e4c27 !important;
+}
+
+.gallery-img {
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
