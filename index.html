@@ -20,172 +20,19 @@
     <meta property="og:type" content="website">
 
     
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-    <style>
-        
-        /* 新增的倒计时样式 */
-        .countdown-container {
-            display: flex;
-            justify-content: center;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-        
-        .countdown-box {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
-            min-width: 100px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .countdown-box:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.95);
-        }
-        
-        .countdown-value {
-            font-size: 3em;
-            font-weight: bold;
-            color: #e74c3c;
-            display: block;
-            line-height: 1;
-            margin-bottom: 5px;
-            text-shadow: 0 2px 3px rgba(0,0,0,0.1);
-        }
-        
-        .countdown-label {
-            font-size: 1em;
-            color: #666;
-            text-transform: uppercase;
-        }
-        
-        .countdown-message {
-            text-align: center;
-            font-size: 1.5em;
-            margin-top: 20px;
-            color: #e74c3c;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { opacity: 0.7; }
-            50% { opacity: 1; }
-            100% { opacity: 0.7; }
-        }
-        
-        /* 响应式调整 */
-        @media (max-width: 768px) {
-            .countdown-box {
-                min-width: 70px;
-                padding: 15px 10px;
-            }
-            
-            .countdown-value {
-                font-size: 2em;
-            }
-            
-            .countdown-label {
-                font-size: 0.8em;
-            }
-        }
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5"> -->
 
-        
-        
-
-        .intro {
-            margin-bottom: 0.5em !important;
-            padding-bottom: 0 !important;
-        } 
-        .header-content .logo {
-            margin-left: 1em;
-        }
-        .header-content .header-nav  
-        .header-content .primary-nav li a,
-        .header-content .member-actions li a {
-            font-size: 1.1em !important; 
-            padding-top: 0.2em !important;
-            padding-bottom: 0.2em !important; 
-        }  
-        .map-nav-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            width: 95vw;
-            max-width: 640px;
-            margin: 16px auto;
-        }
-        .map-nav-container a {
-            flex: 1 1 180px;
-            min-width: 120px;
-            text-align: center;
-        }
-        .traffic-info-container {
-            width: 95vw;
-            max-width: 720px;
-            margin: 2em auto 0 auto;
-            padding: 0;
-            background: none;
-        }
-        .traffic-info-container p {
-            font-size: 1.1em;
-            color: #331a00;
-            font-family: 'Microsoft YaHei','宋体',serif;
-            line-height: 1.3;
-            margin-bottom: 0.3em;
-            text-align: left;
-            padding: 6px 12px 6px 4em; /* 右侧16px，左侧2em自适应缩进 */
-            border-radius: 10px;
-            background: none;
-            box-sizing: border-box;
-            word-break: break-all;
-        }
-        /* .img-wrap {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            padding-top: 133.33%;  
-            border-radius: 48px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        } */
-
-        
-        #eng-pics .img-wrap {
-            padding-top: 133.33% !important;   
-            border-radius: 8px !important;
-        }
-        #eng-pics .img-wrap img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
- 
-        @media (max-width: 540px) {
-            .traffic-info-container, .map-nav-container {
-                max-width: 98vw;
-                width: 98vw;
-            }
-            .traffic-info-container p {
-                font-size: 1em;
-                padding-left: 1em;
-                padding-right: 1em;
-            } 
-        }
-    </style>
+    <link rel="stylesheet" href="fonts/et-line-font/style.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/queries.css">
     <script>
         // load css files from CDN if local node_modules fail
         function loadCssFromCDN(css) {
@@ -197,11 +44,11 @@
                 link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
             }
             link.rel = 'stylesheet';
-
+        
             // add link tag to head section
             document.getElementsByTagName('head')[0].appendChild(link);
         }
-
+        
         // load js files from CDN if local node_modules fail
         function loadJsFromCDN(js) {
             if (js === 'waypoints.js') {
@@ -211,19 +58,15 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="fonts/et-line-font/style.css">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/styles.min.css">
-    <link rel="stylesheet" href="css/queries.css">
+
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+WenYi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+WenYi&display=swap" rel="stylesheet"> -->
+    
 </head>
 <body id="top">
 <!--[if lt IE 8]>
@@ -343,77 +186,6 @@
 </section>
 
 
-<!-- 照片墙 -->
-<!-- <section class="section" id="gallery">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h3>我们的照片</h3>
-        </div>
-    </div>
-    
-    <div class="gallery-container">
-        <div class="gallery-item">
-            <a class="fancybox" rel="group" href="img/a00162.jpg">
-                <div class="img-wrap">
-                    <div class="overlay">
-                        <i class="fa fa-search"></i>
-                    </div>
-                    <img src="img/a00162.jpg" alt=""/>
-                </div>
-            </a> 
-        </div>
-        <div class="gallery-item">
-            <a class="fancybox" rel="group" href="img/a0702.jpg">
-                <div class="img-wrap">
-                    <div class="overlay">
-                        <i class="fa fa-search"></i>
-                    </div>
-                    <img src="img/a0702.jpg" alt=""/>
-                </div>
-            </a> 
-        </div>
-        <div class="gallery-item">
-            <a class="fancybox" rel="group" href="img/a00052.jpg">
-                <div class="img-wrap">
-                    <div class="overlay">
-                        <i class="fa fa-search"></i>
-                    </div>
-                    <img src="img/a00052.jpg" alt=""/>
-                </div>
-            </a> 
-        </div>
-        <div class="gallery-item">
-            <a class="fancybox" rel="group" href="img/a00091.jpg">
-                <div class="img-wrap">
-                    <div class="overlay">
-                        <i class="fa fa-search"></i>
-                    </div>
-                    <img src="img/a00091.jpg" alt=""/>
-                </div>
-            </a> 
-        </div>
-        <div class="gallery-item">
-            <a class="fancybox" rel="group" href="img/a0680.jpg">
-                <div class="img-wrap">
-                    <div class="overlay">
-                        <i class="fa fa-search"></i>
-                    </div>
-                    <img src="img/a0680.jpg" alt=""/>
-                </div>
-            </a> 
-        </div>
-        <div class="gallery-item">
-            <a class="fancybox" rel="group" href="img/a0448.jpg">
-                <div class="img-wrap">
-                    <div class="overlay">
-                        <i class="fa fa-search"></i>
-                    </div>
-                    <img src="img/a0448.jpg" alt=""/>
-                </div>
-            </a> 
-        </div>
-    </div>
-</section> -->
 
 
 <section id="eng-pics" class="section-padding">
@@ -500,7 +272,8 @@
 <section id="map" class="section-padding">
     <div class="text-center">
         <h3>婚礼地址</h3>
-        <p>辽宁省大连市瓦房店市世纪广场28号 大连悦宸酒店（原远洲酒店）</p>
+        <p class="address-p">辽宁省大连市瓦房店市世纪广场28号 </p>
+        <p class="address-p">大连悦宸酒店（原远洲酒店）</p>
     </div>
     <div id="map-canvas" style="width:98vw; max-width:1000px; height:420px; margin:0 auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06);"></div>
     <div class="map-nav-container">
@@ -522,102 +295,16 @@
         </a>
     </div>
     <div class="traffic-info-container">
-        <p><i class="fa fa-plane" style="color:#8e5c2c;"></i> 大连周水子国际机场：距离酒店约100公里，车程约90分钟</p>
-        <p><i class="fa fa-subway" style="color:#8e5c2c;"></i> 大连北站：距离酒店约87公里，车程约80分钟</p>
-        <p><i class="fa fa-train" style="color:#8e5c2c;"></i> 瓦房店站：距离酒店约3.2公里，车程约10分钟</p>
-        <p><i class="fa fa-subway" style="color:#8e5c2c;"></i> 瓦房店西站：距离酒店约17公里，车程约20分钟</p>
-        <p><i class="fa fa-phone" style="color:#8e5c2c;"></i> 若您从外地来参加婚礼，请提前联系我们哦，我们会为您安排接送站和住宿。</p>
+        <p><i class="fa fa-plane" style="color:#8e5c2c;"></i>  &nbsp; 大连周水子国际机场：距离酒店约100公里，车程约90分钟</p>
+        <p><i class="fa fa-subway" style="color:#8e5c2c;"></i>  &nbsp; 大连北站：距离酒店约87公里，车程约80分钟</p>
+        <p><i class="fa fa-train" style="color:#8e5c2c;"></i>  &nbsp; 瓦房店站：距离酒店约3.2公里，车程约10分钟</p>
+        <p><i class="fa fa-subway" style="color:#8e5c2c;"></i>  &nbsp; 瓦房店西站：距离酒店约17公里，车程约20分钟</p>
+        <p><i class="fa fa-phone" style="color:#8e5c2c;"></i>  &nbsp; 若您从外地来参加婚礼，请提前联系我们哦，我们会为您安排接送站和住宿。</p>
     </div>
     <p> </p>
-    <!-- <div class="container">
-        <div class="row text-center">
-            <div class="col-md-12" style="padding: 5px;">
-                <a class="btn btn-fill btn-small" href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=上海外滩XX酒店"><i class="fa fa-taxi"></i>&nbsp;&nbsp;一键导航</a>
-            </div>
-        </div>
-    </div> -->
+   
 </section>
 
-
-
-<!-- <section class="rsvp text-center" id="rsvp">
-
-    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="text-center">
-                    <h3>宾客回执</h3>
-                    <p>请您于2025年7月31日前确认是否出席</p>
-                </div> 
-                <form id="rsvp-form" class="rsvp-form"
-                      action=""
-                      method="POST">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Your email"
-                                                                     required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Husband/Wife or kids"
-                                                                  required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" id="alert-wrapper"></div>
-                    </div>
-                    <button class="btn-fill rsvp-btn">
-                        Yes,
-                        that's me!
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <iframe src="https://www.wjx.cn/vm/YD2Cjut.aspx" width="100%" height="600" frameborder="0"></iframe>
-
-    <script type='text/javascript' src='https://tp.wjx.top/handler/jqemed.ashx?activity=YD2Cjut&width=760&source=iframe'></script>
-
-</section> -->
 
 
 <footer>
@@ -638,69 +325,6 @@
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
 <script src="https://webapi.amap.com/maps?v=2.0&key=08ee8a0f48b8f1f177b8ee811b2f9cce"></script>
-<script>
-function initMap() {
-    var map = new AMap.Map('map-canvas', {
-        center: [121.97783456315749, 39.626490650648726], // [经度, 纬度]
-        zoom: 15
-    });
-    var icon = new AMap.Icon({
-        image: 'img/marker.png', // 你的 marker 图片路径
-        size: new AMap.Size(50, 50), // 图标显示大小
-        imageSize: new AMap.Size(50, 50) // 图片实际大小
-    });
-    var marker = new AMap.Marker({
-        position: [121.97783456315749, 39.626490650648726],
-        title: '大连悦宸酒店（原远洲酒店）',
-        icon: icon,
-        anchor: 'bottom-center'
-    });
-    map.add(marker);
-}
 
-function updateCountdown() {
-    // 设置婚礼日期时间（2025年8月17日11:58，注意月份从0开始计数）
-    const weddingDate = new Date(2025, 7, 17, 11, 58, 0);
-    const now = new Date();
-    
-    // 计算时间差（毫秒）
-    const diff = weddingDate - now;
-    
-    // 如果婚礼时间已过
-    if (diff < 0) {
-        if (document.getElementById('countdown-message')) {
-            document.getElementById('countdown-message').textContent = "婚礼正在进行中！";
-        }
-        document.getElementById('days').textContent = "00";
-        document.getElementById('hours').textContent = "00";
-        document.getElementById('minutes').textContent = "00";
-        document.getElementById('seconds').textContent = "00";
-        return;
-    }
-    
-    // 计算天、小时、分钟和秒
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    
-    // 更新显示
-    document.getElementById('days').textContent = days.toString().padStart(2, '0');
-    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-}
-
-// 页面加载完成后初始化地图和倒计时
-document.addEventListener('DOMContentLoaded', function() {
-    initMap();
-    
-    // 初始化倒计时
-    updateCountdown();
-    
-    // 每秒更新一次倒计时
-    setInterval(updateCountdown, 1000);
-});
-</script>
 </body>
 </html>
