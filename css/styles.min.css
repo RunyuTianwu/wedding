@@ -831,10 +831,10 @@ header .member-actions {
     #eng-pics .row > [class*="col-"] {
       padding: 8px;
       box-sizing: border-box;
-      flex: 0 0 50%;
-      max-width: 50%;
+      flex: 0 0 100%;
+      max-width: 100%;
     }
-  }
+  } 
 
   #eng-pics .row {
     margin-left: -8px;
